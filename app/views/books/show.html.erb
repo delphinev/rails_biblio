@@ -1,0 +1,8 @@
+<h1><%= @book.title %></h1>
+
+<%= render "books/form" %>
+
+<%= form_tag "/books/#{@book.id}", method: "delete" do %>
+	<input type="submit" value="Delete" />
+<% end %>
+<p><a href="/books"> Back to index </a></p>
